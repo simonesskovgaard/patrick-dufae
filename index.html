@@ -3,254 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Patrick Dufáe - Wikipedia</title>
-<style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #fff;
-    color: #202122;
-    font-size: 14px;
-  }
-  a { color: #0645ad; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  a.new { color: #ba0000; }
-
-  /* Top black bar */
-  .topbar {
-    background: #1a1a1a;
-    color: #fff;
-    font-size: 12px;
-    padding: 4px 12px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 14px;
-  }
-  .topbar a { color: #a7d7f9; }
-
-  .page-shell {
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
-  /* Sidebar */
-  .sidebar {
-    width: 200px;
-    flex-shrink: 0;
-    padding: 12px 8px;
-    border-right: 1px solid #a2a9b1;
-  }
-  .sidebar .logo-block {
-    text-align: center;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #a2a9b1;
-    margin-bottom: 10px;
-  }
-  .sidebar .logo-block svg { width: 50px; height: 50px; }
-  .sidebar .logo-block .wordmark {
-    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
-    font-weight: bold;
-    font-size: 15px;
-    margin-top: 4px;
-  }
-  .sidebar h3 {
-    font-size: 12px;
-    color: #54595d;
-    margin: 14px 0 6px;
-    text-transform: none;
-    border-bottom: 1px solid #eaecf0;
-    padding-bottom: 3px;
-  }
-  .sidebar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .sidebar li { margin-bottom: 4px; font-size: 12.5px; }
-  .search-box {
-    margin: 10px 0;
-    display: flex;
-  }
-  .search-box input {
-    flex: 1;
-    border: 1px solid #a2a9b1;
-    border-right: none;
-    padding: 4px 6px;
-    font-size: 12px;
-    border-radius: 2px 0 0 2px;
-  }
-  .search-box button {
-    border: 1px solid #a2a9b1;
-    background: #f8f9fa;
-    padding: 4px 8px;
-    border-radius: 0 2px 2px 0;
-    cursor: pointer;
-  }
-
-  /* Main content */
-  .content {
-    flex: 1;
-    padding: 16px 24px 40px;
-    min-width: 0;
-  }
-  .page-title {
-    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
-    font-size: 28px;
-    font-weight: normal;
-    border-bottom: 1px solid #a2a9b1;
-    padding-bottom: 6px;
-    margin: 0 0 4px;
-  }
-  .subtitle-italic {
-    font-style: italic;
-    font-size: 13px;
-    color: #202122;
-    margin-bottom: 14px;
-  }
-  .disambig-note {
-    font-style: italic;
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-  .tags-box {
-    background: #f8f9fa;
-    border: 1px solid #a2a9b1;
-    padding: 8px 12px;
-    font-size: 12.5px;
-    margin-bottom: 14px;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .tags-box .icon {
-    font-size: 22px;
-    line-height: 1;
-  }
-
-  .infobox {
-    float: right;
-    width: 280px;
-    margin: 0 0 16px 20px;
-    border: 1px solid #a2a9b1;
-    background: #f8f9fa;
-    font-size: 12.5px;
-  }
-  .infobox .infobox-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 6px;
-    border-bottom: 1px solid #a2a9b1;
-  }
-  .infobox img.portrait {
-    display: block;
-    width: 100%;
-  }
-  .infobox .caption {
-    text-align: center;
-    font-size: 11.5px;
-    padding: 4px 8px;
-    border-bottom: 1px solid #a2a9b1;
-    color: #202122;
-  }
-  .infobox table { width: 100%; border-collapse: collapse; }
-  .infobox td, .infobox th {
-    padding: 5px 8px;
-    vertical-align: top;
-    border-top: 1px solid #eaecf0;
-    text-align: left;
-  }
-  .infobox th { font-weight: normal; color: #54595d; width: 38%; }
-  .infobox .section-row td {
-    font-weight: bold;
-    background: #eaecf0;
-    text-align: center;
-  }
-
-  .portrait-frame { width: 100%; line-height: 0; }
-  .portrait-frame svg { width: 100%; height: auto; display: block; }
-  .placeholder-portrait {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background: repeating-linear-gradient(45deg, #d8dce0, #d8dce0 10px, #e8eaed 10px, #e8eaed 20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #72777d;
-    font-size: 12px;
-    text-align: center;
-    padding: 10px;
-  }
-
-  h2 {
-    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
-    font-weight: normal;
-    font-size: 21px;
-    border-bottom: 1px solid #a2a9b1;
-    margin-top: 28px;
-    padding-bottom: 4px;
-  }
-  h3 {
-    font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 18px;
-  }
-  p { line-height: 1.6; margin: 10px 0; }
-  sup.cite { font-size: 11px; color: #0645ad; }
-  .toc {
-    display: inline-block;
-    border: 1px solid #a2a9b1;
-    background: #f8f9fa;
-    padding: 10px 20px 10px 14px;
-    margin: 10px 0 20px;
-    font-size: 13px;
-  }
-  .toc-title { font-weight: bold; margin-bottom: 6px; }
-  .toc ol { margin: 0; padding-left: 20px; }
-  .toc ol ol { padding-left: 18px; font-size: 12.5px; }
-  .toc li { margin-bottom: 3px; }
-
-  .refs {
-    font-size: 12.5px;
-    padding-left: 22px;
-    line-height: 1.7;
-  }
-  .refs li { margin-bottom: 4px; }
-
-  .catlinks {
-    margin-top: 30px;
-    border-top: 1px solid #a2a9b1;
-    padding-top: 8px;
-    font-size: 12.5px;
-    background: #f8f9fa;
-    padding: 8px 12px;
-  }
-  .catlinks a { margin-right: 4px; }
-  .catlinks .cat-sep { color: #54595d; }
-
-  .parody-footer {
-    margin-top: 10px;
-    font-size: 11px;
-    color: #72777d;
-    text-align: center;
-  }
-
-  .lastedit {
-    font-size: 11.5px;
-    color: #54595d;
-    margin-top: 18px;
-  }
-
-  blockquote {
-    border-left: 4px solid #a2a9b1;
-    margin: 14px 0;
-    padding: 4px 16px;
-    color: #333;
-    font-style: italic;
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -333,7 +86,7 @@
       <div class="infobox">
         <div class="infobox-title">Patrick Dufáe</div>
         <div class="portrait-frame">
-          <img class="portrait" src="portrait.jpg" alt="Patrick Dufáe outside Le Claridge, Kelly bag in hand">
+          <img class="portrait" src="portrait.jpg" alt="Patrick Dufáe outside Le Claridge, Kelly bag in hand" onclick="openLightbox(this.src, this.alt)">
         </div>
         <div class="caption">Dufáe outside Le Claridge, in his signature travelling ensemble, Hermès Kelly bag in hand</div>
         <table>
@@ -449,6 +202,12 @@
         "I never wanted to own the colour. I wanted someone, anyone, to admit that someone
         should have to ask first."<br>— Patrick Dufáe, 2022<sup class="cite">[3]</sup>
       </blockquote>
+      <p>
+        Beige was far from an isolated incident: Dufáe has filed, and mostly lost, well over a
+        dozen further trademark applications over the years. See
+        <a href="trademarks.html">List of trademark applications by Patrick Dufáe</a> for the
+        full record.
+      </p>
 
       <h3 id="wspf">World Sock-Puppetry Federation</h3>
       <p>
@@ -523,7 +282,7 @@
 
       <h2 id="see-also">See also</h2>
       <ul>
-        <li><a href="#" class="new">List of unusual trademark applications</a></li>
+        <li><a href="trademarks.html">List of trademark applications by Patrick Dufáe</a></li>
         <li><a href="#" class="new">Competitive yodeling</a></li>
         <li><a href="#" class="new">Sock puppet (disambiguation)</a></li>
       </ul>
@@ -565,5 +324,24 @@
     </div>
   </div>
 
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    function openLightbox(src, alt) {
+      var overlay = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      img.src = src;
+      img.alt = alt;
+      overlay.classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>
