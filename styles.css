@@ -276,11 +276,16 @@ blockquote {
 }
 
 /* Trademark list table */
+.table-scroll {
+  overflow-x: auto;
+  margin: 14px 0 20px;
+}
 .tm-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
-  margin: 14px 0 20px;
   font-size: 13px;
+  margin: 0;
 }
 .tm-table th, .tm-table td {
   border: 1px solid #a2a9b1;
